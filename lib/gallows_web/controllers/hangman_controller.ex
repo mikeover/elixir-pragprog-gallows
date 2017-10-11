@@ -1,8 +1,8 @@
 defmodule GallowsWeb.HangmanController do
   use GallowsWeb, :controller
 
-  def new_game(conn, _params) do
-    render conn, "new_game.html"
+  def new_game(conn, params) do
+    create_game(conn, params)
   end
 
   def create_game(conn, _params) do
