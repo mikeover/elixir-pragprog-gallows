@@ -4,7 +4,7 @@ defmodule GallowsWeb.HangmanView do
   import GallowsWeb.Views.Helpers.GameStateHelper
 
   def turn(left, target) when target >= left, do: ""
-  def turn(left, target), do: "faint"
+  def turn(_left, _target), do: "faint"
 
   def game_over?(%{ game_state: game_state }) do
     game_state in [ :won, :lost ]
